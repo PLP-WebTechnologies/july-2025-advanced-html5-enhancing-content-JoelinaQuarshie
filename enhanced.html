@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enhanced HTML5 Form Page</title>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to the Enhanced HTML5 Web Page</h1>
+    <p>This page showcases lists, tables, media elements, and a complete HTML5 form with native validation.</p>
+  </header>
+  <section>
+  <h2>Lists</h2>
+        <!-- Ordered lists <ol> are numbered -->
+        <h3>Ordered Lists</h3>
+        <!--attributes describe ordered list type(numbers,alphabetss,roman numerals) and start points-->
+        <ol type="a" start="1"> 
+            <li>html</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ol>
+        <!-- Unordered lists <ul> are bullet points -->
+        <!--attributes describe unordered list type (disc, circle, square)-->
+        <h3>Unordered Lists</h3>
+        <ul>
+            <li>html</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ul>
+        <!--Definition Lists-->
+        <h2>Definition Lists</h2>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Hypertext Markup Language</dd>
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheets</dd>
+            <dt>JavaScript</dt>
+            <dd>A programming language for web development</dd>
+        </dl>
+        <!--Nested Lists-->
+        <h2>Nested lists</h2>
+        <ul>
+          <li>Fruits
+             <ol type="a">
+                    <li>Apple</li>
+                    <li>Banana</li>
+                    <li>Cherry
+                      <ul>
+                           <li>Red Cherry</li>
+                           <li>Black Cherry</li>
+                       </ul> 
+                    </li>
+             </ol>  
+          </li>
+              <li>Vegetables
+                  <ol type="I">
+                     <li>Carrot</li>
+                     <li>Broccoli</li>
+                     <li>Spinach</li>
+                  </ol>
+              </li>
+        </ul>
+    <h2>Media Showcase</h2>
+    <!--Images-->
+        <h3>Embedded Image</h3>
+        <img src="highway.jpg" alt="image of dual carriageway" width="300" height="300" /> 
+        <img src="https://images.pexels.com/photos/33276781/pexels-photo-33276781.jpeg" alt="alleyway" width="300" height="300" />
+
+        <!--Videos-->
+    <video width="600" controls>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p>Video: Sample media clip for demonstration purposes.</p>
+  </section>
+
+  <section>
+    <h2>HTML5 Contact Form</h2>
+    <form action="#" method="post" autocomplete="on">
+      
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="fullname">Full Name *</label>
+        <input type="text" id="fullname" name="fullname" required minlength="2" placeholder="e.g., John Doe">
+
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" pattern="^\+?\d{10,15}$" placeholder="e.g., +1234567890">
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" max="2020-01-01">
+      </fieldset>
+
+      <fieldset>
+        <legend>Account Setup</legend>
+
+        <label for="username">Username *</label>
+        <input type="text" id="username" name="username" required minlength="4" maxlength="15" pattern="^[a-zA-Z0-9_]+$" placeholder="Choose a username">
+
+        <label for="password">Password *</label>
+        <input type="password" id="password" name="password" required minlength="8" placeholder="Min 8 characters">
+
+        <label for="confirm-password">Confirm Password *</label>
+        <input type="password" id="confirm-password" name="confirm-password" required minlength="8" placeholder="Retype password" readonly>
+
+        <label for="country">Country *</label>
+        <select id="country" name="country" required>
+          <option value="">-- Select Country --</option>
+          <option value="us">United States</option>
+          <option value="uk">United Kingdom</option>
+          <option value="ca">Canada</option>
+          <option value="au">Australia</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences</legend>
+
+        <label>
+          <input type="checkbox" name="subscribe" checked>
+          Subscribe to newsletter
+        </label>
+
+        <label>
+          <input type="radio" name="contact-method" value="email" required>
+          Contact via Email
+        </label>
+
+        <label>
+          <input type="radio" name="contact-method" value="phone" required>
+          Contact via Phone
+        </label>
+
+        <label for="comments">Additional Comments</label>
+        <textarea id="comments" name="comments" rows="4" maxlength="500" placeholder="Your message..."></textarea>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Enhanced HTML5 Page. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
